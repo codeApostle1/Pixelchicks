@@ -1,54 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BirdieHub - Book Your Birds</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Poultry Booking</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <nav class="navbar">
-      <h1 class="logo">BirdieHub</h1>
-      <div>
-        <a href="login.html" class="btn">Login</a>
-        <a href="signup.html" class="btn btn-primary">Sign Up</a>
-      </div>
-    </nav>
-  </header>
-
-  <section class="hero">
-    <div class="hero-content">
-      <h2>Fresh, Healthy Day-Old Chicks Delivered</h2>
-      <p>Book broilers, noilers, and turkeys directly from top hatcheries. Easy, fast, reliable.</p>
-      <a href="signup.html" class="btn btn-primary">Get Started</a>
-    </div>
-    <div class="hero-image">
-      <!-- Add a nice farm/chick image here -->
-      <img src="img/guys.jpg" alt="Farm">
+  <!-- LOGIN SECTION -->
+  <section id="loginSection" class="login-section">
+    <h2>Login</h2>
+    <div class="login-form">
+      <input type="tel" id="loginPhone" placeholder="Phone Number" required>
+      <input type="password" id="loginPassword" placeholder="Password" required>
+      <button onclick="login()">Login</button>
+      <p>Don't have an account? Sign up below:</p>
+      <input type="text" id="signupName" placeholder="Full Name">
+      <input type="tel" id="signupPhone" placeholder="Phone Number">
+      <input type="password" id="signupPassword" placeholder="Password">
+      <input type="password" id="signupConfirm" placeholder="Confirm Password">
+      <button onclick="signUp()">Sign Up</button>
     </div>
   </section>
 
-  <section class="features">
-    <h2>Why Choose BirdieHub?</h2>
-    <div class="feature-cards">
-      <div class="card">
-        <h3>Top Hatcheries</h3>
-        <p>Agrited, Chikun, Vertex and more trusted brands.</p>
-      </div>
-      <div class="card">
-        <h3>Updated Pricing</h3>
-        <p>Always see real-time prices before booking.</p>
-      </div>
-      <div class="card">
-        <h3>Doorstep Delivery</h3>
-        <p>Get your chicks safely delivered to your farm.</p>
-      </div>
-    </div>
-  </section>
+  <!-- MAIN CONTENT -->
+  <div id="mainContent" style="display:none;">
+    <!-- HEADER -->
+    <header class="header">
+      <div class="logo"></div> PixelChicks</div>
+      <nav class="nav">
+        <ul>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#booking">Book Now</a></li>
+          <li><a href="#myBookings">My Bookings</a></li>
+        </ul>
+      </nav>
+      <div class="hamburger">&#9776;</div>
+    </header>
 
-  <footer>
-    <p>&copy; 2025 BirdieHub. All Rights Reserved.</p>
-  </footer>
+    <!-- MOBILE MENU -->
+    <div class="mobile-menu">
+      <ul>
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#booking">Book Now</a></li>
+        <li><a href="#myBookings">My Bookings</a></li>
+      </ul>
+    </div>
+
+    <!-- HERO SECTION -->
+    <section id="hero" class="hero">
+      <div class="hero-text">
+        <h1>Book Day-Old Chicks Easily</h1>
+        <p>Order your quality poultry chicks online, quick and easy!</p>
+        <a href="#booking" class="btn">Book Now</a>
+      </div>
+      <div class="hero-image">
+        <img src="hero.jpg" alt="Poultry Image" />
+      </div>
+    </section>
+
+    <!-- PRODUCTS SECTION -->
+    <section id="products" class="products">
+      <h2>Our Products</h2>
+      <div class="product-grid">
+        <div class="product-card" data-product="Broiler Chicks" data-price="500">
+          <img src="broiler.jpg" alt="Broiler Chicks">
+          <h3>Broiler Chicks</h3>
+          <p>₦500 per chick</p>
+          <button class="select-product">Select</button>
+        </div>
+        <div class="product-card" data-product="Layer Chicks" data-price="600">
+          <img src="noiler.jpg" alt="Layer Chicks">
+          <h3>Layer Chicks</h3>
+          <p>₦600 per chick</p>
+          <button class="select-product">Select</button>
+        </div>
+        <div class="product-card" data-product="Cockerel Chicks" data-price="400">
+          <img src="noiler.jpg" alt="Cockerel Chicks">
+          <h3>Cockerel Chicks</h3>
+          <p>₦400 per chick</p>
+          <button class="select-product">Select</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- BOOKING FORM -->
+    <section id="booking" class="booking">
+      <h2>Book Your Chicks</h2>
+      <form id="bookingForm">
+        <label for="product">Select Product</label>
+        <select id="product" required>
+          <option value="">--Choose Product--</option>
+          <option value="Broiler Chicks">Broiler Chicks</option>
+          <option value="Layer Chicks">Layer Chicks</option>
+          <option value="Cockerel Chicks">Cockerel Chicks</option>
+        </select>
+
+        <label for="quantity">Quantity</label>
+        <input type="number" id="quantity" min="1" required>
+
+        <label for="name">Full Name</label>
+        <input type="text" id="name" required>
+
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" required>
+
+        <button type="submit">Book Now</button>
+      </form>
+    </section>
+
+    <!-- MY BOOKINGS -->
+    <section id="myBookings" class="my-bookings">
+      <h2>My Bookings</h2>
+      <ul id="bookingsList">
+        <li>No bookings yet...</li>
+      </ul>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <p>© 2025 PiXel Chicks</p>
+      
+      <p>designed by <a href="https://wa.me/2348107660935">Joel</a></p>
+      <button onclick="logout()">Logout</button>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
