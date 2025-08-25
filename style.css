@@ -1,0 +1,125 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #fff;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* HEADER */
+.header {
+  background: #4CAF50;
+  color: white;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+.hero-img {
+  width: 90%;
+  max-width: 400px;
+  border-radius: 15px;
+  margin-top: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* PRODUCTS */
+.products {
+  padding: 1rem;
+}
+.company {
+  background: #fff;
+  margin: 1rem 0;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+.company h3 {
+  margin-top: 0;
+  color: #4CAF50;
+}
+.card {
+  background: #fafafa;
+  margin: 0.5rem 0;
+  padding: 0.8rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s;
+}
+.card:hover {
+  transform: scale(1.02);
+}
+
+/* OPTIONS */
+.options {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: #f9f9f9;
+  border-top: 1px solid #eee;
+}
+
+/* BUTTONS */
+.btn {
+  background: #4CAF50;
+  border: none;
+  padding: 0.7rem 1.2rem;
+  color: white;
+  font-weight: bold;
+  border-radius: 25px;
+  cursor: pointer;
+  margin: 0.3rem;
+  transition: background 0.2s, transform 0.2s;
+}
+.btn:hover {
+  background: #43a047;
+  transform: scale(1.05);
+}
+
+/* MODAL */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+}
+.modal-content {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 350px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+.modal-content input {
+  width: 90%;
+  padding: 0.6rem;
+  margin: 0.5rem 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  transition: 0.2s;
+}
+.modal-content input:focus {
+  border: 1px solid #4CAF50;
+  outline: none;
+  box-shadow: 0 0 6px rgba(76, 175, 80, 0.4);
+}
+
+/* RESPONSIVE */
+@media (min-width: 768px) {
+  .products {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+}
