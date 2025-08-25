@@ -137,3 +137,16 @@ document.addEventListener('DOMContentLoaded', () => {
     mainContent.style.display = 'block';
   }
 });
+
+        function showLogin() {
+  document.getElementById('loginModal').style.display = 'flex';
+}
+
+function closeLogin() {
+  alert('Account Created! You can now book poultry birds.');
+  document.getElementById('loginModal').style.display = 'none';
+}
+
+
+
+    
