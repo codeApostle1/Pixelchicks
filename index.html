@@ -27,27 +27,35 @@
   -->
   
   <section id="loginSection" class="login-section">
-  <h2 id="formTitle">Login</h2>
-  
-  <!-- Login Form -->
-  <div id="loginForm" class="login-form">
-    <input type="tel" id="loginPhone" placeholder="Phone Number" required>
-    <input type="password" id="loginPassword" placeholder="Password" required>
-    <button onclick="login()">Login</button>
-    <p>Don't have an account? <a href="#" onclick="showSignup()">Sign up</a></p>
+  <div class="login-hero">
+    <img src="hero2.jpg" alt="Chicken Hero Image">
+    <div class="overlay"></div>
+    <h1 class="login-title">Welcome to PixelChicks</h1>
+    <p class="login-subtitle">Order day-old chicks easily and quickly</p>
   </div>
 
-  <!-- Signup Form -->
-  <div id="signupForm" class="login-form" style="display:none;">
-    <input type="text" id="signupName" placeholder="Full Name" required>
-    <input type="tel" id="signupPhone" placeholder="Phone Number" required>
-    <input type="password" id="signupPassword" placeholder="Password" required>
-    <input type="password" id="signupConfirm" placeholder="Confirm Password" required>
-    <button onclick="signUp()">Sign Up</button>
-    <p>Already have an account? <a href="#" onclick="showLoginForm()">Login</a></p>
+  <div class="login-container">
+    <h2 id="formTitle">Login</h2>
+
+    <!-- LOGIN FORM -->
+    <div id="loginForm" class="login-form">
+      <input type="tel" id="loginPhone" placeholder="Phone Number" required>
+      <input type="password" id="loginPassword" placeholder="Password" required>
+      <button onclick="login()">Login</button>
+      <p>Don't have an account? <a href="#" onclick="showSignup()">Sign up</a></p>
+    </div>
+
+    <!-- SIGNUP FORM -->
+    <div id="signupForm" class="login-form" style="display:none;">
+      <input type="text" id="signupName" placeholder="Full Name" required>
+      <input type="tel" id="signupPhone" placeholder="Phone Number" required>
+      <input type="password" id="signupPassword" placeholder="Password" required>
+      <input type="password" id="signupConfirm" placeholder="Confirm Password" required>
+      <button onclick="submitSignup()">Sign Up</button>
+      <p>Already have an account? <a href="#" onclick="showLoginForm()">Login</a></p>
+    </div>
   </div>
 </section>
-
   <!-- MAIN CONTENT -->
   <div id="mainContent" style="display:none;">
     <!-- HEADER -->
