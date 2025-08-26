@@ -9,7 +9,7 @@ This project was built for the **Hospitality Revolution Hackathon 2025**, focusi
 
 ##  Features
 
-✅ **User Accounts**: Customers can create accounts and log in using their phone numbers.  
+**User Accounts**: Customers can create accounts and log in using their phone numbers.  
 **Product Catalog**: Displays different chick types with pricing and quick-select options.  
 **Booking System**: Farmers can book chicks, with details stored in local storage.  
 **My Bookings Page**: Shows all bookings made by the logged-in user.  
@@ -54,6 +54,6 @@ This solution demonstrates how hospitality principles (ease, speed, trust) can b
 
  Payment gateway integration (Opay, Paystack, Flutterwave)
 
-☁️ Database Integration (Firebase or Supabase for persistent data)
+ Database Integration (Firebase or Supabase for persistent data)
 
-📱 Progressive Web App (PWA) for offline access
+Progressive Web App (PWA) for offline access

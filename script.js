@@ -18,10 +18,23 @@ const loginSection = document.getElementById('loginSection');
 const mainContent = document.getElementById('mainContent');
 let currentUser = null;
 
-function showLogin() {
-  loginSection.style.display = 'block';
-  mainContent.style.display = 'none';
+  function showLogin() {
+    loginSection.style.display = 'flex';
+    mainContent.style.display = 'none';
+  }
+  
+  function showLoginForm() {
+  document.getElementById('signupForm').style.display = 'none';
+  document.getElementById('loginForm').style.display = 'flex';
+  document.getElementById('formTitle').textContent = 'Login';
 }
+  
+    function showSignup() {
+  document.getElementById('loginForm').style.display = 'none';
+  document.getElementById('signupForm').style.display = 'flex';
+  document.getElementById('formTitle').textContent = 'Sign Up';
+}
+  
 
 function login() {
   const phone = document.getElementById('loginPhone').value.trim();
@@ -53,6 +66,8 @@ function logout() {
 
 // ===== SIGN UP FUNCTION =====
 function signUp() {
+  
+  
   const name = document.getElementById('signupName').value.trim();
   const phone = document.getElementById('signupPhone').value.trim();
   const password = document.getElementById('signupPassword').value;
@@ -78,7 +93,7 @@ function signUp() {
   alert('Account created successfully! You can now login.');
   document.getElementById('loginPhone').value = phone;
   document.getElementById('loginPassword').value = '';
-  showLogin();
+  showLoginForm();
 }
 
 // ===== SELECT PRODUCT FROM CARD =====
@@ -138,9 +153,9 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-        function showLogin() {
-  document.getElementById('loginModal').style.display = 'flex';
-}
+       // function showLogin() {
+//  document.getElementById('loginModal').style.display = 'flex';
+//}
 
 function closeLogin() {
   alert('Account Created! You can now book poultry birds.');

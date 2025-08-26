@@ -30,18 +30,39 @@ button {
   color: #4CAF50;
   margin-bottom: 1rem;
 }
+/* 
 .login-form {
   display: flex;
   flex-direction: column;
   gap: 0.8rem;
   width: 90%;
   max-width: 400px;
-}
+} */
 .login-form input {
   padding: 0.7rem;
   border-radius: 8px;
   border: 1px solid #ccc;
+} 
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  width: 90%;
+  max-width: 400px;
+  margin: auto;
 }
+
+.login-form a {
+  color: #4CAF50;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.login-form a:hover {
+  text-decoration: underline;
+}
+
 .login-form input:focus {
   outline: none;
   border: 1px solid #4CAF50;

@@ -8,6 +8,7 @@
 </head>
 <body>
   <!-- LOGIN SECTION -->
+  <!-- 
   <section id="loginSection" class="login-section">
     <h2>Login</h2>
     <div class="login-form">
@@ -22,6 +23,30 @@
       <button onclick="signUp()">Sign Up</button>
     </div>
   </section>
+  
+  -->
+  
+  <section id="loginSection" class="login-section">
+  <h2 id="formTitle">Login</h2>
+  
+  <!-- Login Form -->
+  <div id="loginForm" class="login-form">
+    <input type="tel" id="loginPhone" placeholder="Phone Number" required>
+    <input type="password" id="loginPassword" placeholder="Password" required>
+    <button onclick="login()">Login</button>
+    <p>Don't have an account? <a href="#" onclick="showSignup()">Sign up</a></p>
+  </div>
+
+  <!-- Signup Form -->
+  <div id="signupForm" class="login-form" style="display:none;">
+    <input type="text" id="signupName" placeholder="Full Name" required>
+    <input type="tel" id="signupPhone" placeholder="Phone Number" required>
+    <input type="password" id="signupPassword" placeholder="Password" required>
+    <input type="password" id="signupConfirm" placeholder="Confirm Password" required>
+    <button onclick="signUp()">Sign Up</button>
+    <p>Already have an account? <a href="#" onclick="showLoginForm()">Login</a></p>
+  </div>
+</section>
 
   <!-- MAIN CONTENT -->
   <div id="mainContent" style="display:none;">
